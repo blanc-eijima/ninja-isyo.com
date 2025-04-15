@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ja" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title><{$page.title}></title>
+<meta name="description" content="<{$page.description}>">
+<link rel="canonical" href="<{$page.canonical_url}>">
+<meta property="og:type" content="website">
+<meta property="og:title" content="<{$page.title}>">
+<meta property="og:description" content="<{$page.description}>">
+<meta property="og:site_name" content="<{$shop.name}>">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="shortcut icon" type="image/ico" href="<{$shop.favicon_url}>">
+<link href="<{$page.css}>" rel="stylesheet">
+<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+<{$makeshop.head}>
+<style>
+.concept-content {
+  margin: 20px 0;
+  line-height: 1.8;
+}
+.concept-content h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 40px 0 20px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #ddd;
+  color: #333;
+}
+.concept-content p {
+  margin-bottom: 20px;
+}
+.concept-content strong {
+  font-weight: bold;
+}
+.concept-image {
+  margin: 25px 0;
+  text-align: center;
+}
+.concept-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.concept-image figcaption {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+}
+.concept-text {
+  margin-bottom: 30px;
+}
+.concept-intro {
+  font-size: 17px;
+  line-height: 1.9;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+@media screen and (max-width: 768px) {
+  .concept-content h3 {
+    font-size: 20px;
+    margin: 30px 0 15px;
+  }
+  .concept-image {
+    margin: 20px 0;
+  }
+  .concept-intro {
+    padding: 15px;
+    font-size: 16px;
+  }
+}
+</style>
+</head>
+
+<body>
+<{$makeshop.body_top}>
+    <{$module.header}>
+
+    <div class="contents">
+
+        <div class="breadcrumb">
+            <span class="breadcrumb-item"><a href="<{$url.top}>">ホーム</a></span>
+            <span class="breadcrumb-item">伊賀忍者衣装.comコンセプト</span>
+        </div>
+
+        <div class="container">
+
+            <{$module.side}>
+
+            <main class="main">
+                <section class="contents-area">
+                    <div class="category-title">
+                        <h2 class="guide-title">伊賀忍者衣装.comコンセプト</h2>
+                    </div>
+
+                    <div class="concept-content">
+                        <div class="concept-intro">
+                            <p>伊賀忍者衣装.comは忍者衣装を通じ、我々の先祖・伊賀流忍者の存在を後世に伝え続けると共に、郷土の歴史と文化を世界に発信することを目的とします。</p>
+                        </div>
+                        
+                        <h3>伊賀上野城</h3>
+                        <figure class="concept-image">
+                            <img src="https://gigaplus.makeshop.jp/ninjaisyo1/img/free/igauenojo.jpg" alt="伊賀上野城の写真">
+                            <figcaption>伊賀上野城</figcaption>
+                        </figure>
+                        
+                        <div class="concept-text">
+                            <p>平成16年11月1日に上野市・伊賀町・島ヶ原村・阿山町・大山田村・青山町の6市町村が合併し「伊賀市」が誕生しました。そして、平成17年10月に伊賀市の花（ササユリ）・木（アカマツ）・鳥（キジ）を市のシンボルとしました。</p>
+                        </div>
+                        
+                        <figure class="concept-image">
+                            <img src="https://gigaplus.makeshop.jp/ninjaisyo1/img/free/sasayuri.jpg" alt="ササユリの日本画">
+                            <figcaption>日本画家・佐々木経二先生が描いた「ササユリ」</figcaption>
+                        </figure>
+                        
+                        <h3>伊賀忍者衣装.com</h3>
+                        <figure class="concept-image">
+                            <img src="https://gigaplus.makeshop.jp/ninjaisyo1/img/free/ninja2.jpg" alt="忍者衣装の写真">
+                            <figcaption>柿渋色（茶色）の忍者衣装</figcaption>
+                        </figure>
+                        
+                        <div class="concept-text">
+                            <p>伊賀忍者の伝統を受け継ぐ本格的な忍者衣装を提供しています。歴史的背景を尊重しながら、現代の技術で作られた高品質な忍者衣装をお届けします。</p>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <{$module.footer}>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="<{$page.javascript}>"></script>
+<{$makeshop.body_bottom}>
+</body>
+</html>
