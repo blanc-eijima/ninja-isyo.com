@@ -58,17 +58,17 @@
                                 </a>
                             </div>
                             <div class="banner-item small">
-                                <a href="#">
+                                <a href="http://ninjaisyo1.shop14.makeshop.jp/view/category/ct19">
                                     <img src="https://gigaplus.makeshop.jp/ninjaisyo1/img/bnr_top_igahakama_s.jpg" alt="伊賀袴式">
                                 </a>
                             </div>
                             <div class="banner-item small">
-                                <a href="#">
+                                <a href="http://ninjaisyo1.shop14.makeshop.jp/view/category/ct17">
                                     <img src="https://gigaplus.makeshop.jp/ninjaisyo1/img/bnr_top_ika.jpg" alt="イカ頭巾">
                                 </a>
                             </div>
                             <div class="banner-item small">
-                                <a href="#">
+                                <a href="http://ninjaisyo1.shop14.makeshop.jp/view/category/ct20">
                                     <img src="https://gigaplus.makeshop.jp/ninjaisyo1/img/bnr_top_kunoichi_ch1v-vt.jpg" alt="くノ一">
                                 </a>
                             </div>
@@ -153,9 +153,83 @@
         <!--最近チェックしたアイテム-->
         <{$module.checked}>
 
+        <!-- コラボレーション＆SNS -->
+        <div class="container">
+            <div class="content-grid">
+                <!-- コラボレーション -->
+                <div class="main-content">
+                    <div class="collaboration-grid">
+                        <div class="collaboration-item">
+                            <div id="shortFilm">
+                                <div class="phtBox">
+                                    <a href="/view/page/kage">
+                                        <img alt="Short Film 影 KAGE" height="180" src="https://gigaplus.makeshop.jp/ninjaisyo1/img/shortfilm_img.jpg">
+                                    </a>
+                                </div>
+                                <div id="shortFilmNote">
+                                    <p>
+                                        <strong>Short Film<br>
+                                        影 KAGE</strong>
+                                    </p>
+                                    <p>
+                                        Short Film 影KAGE に衣装協力しました。
+                                    </p>
+                                    <p class="more-link">
+                                        <a href="/view/page/kage">ギャラリー</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="collaboration-item">
+                            <div id="eisukeBlock">
+                                <div class="phtBox">
+                                    <a href="https://vimeo.com/185166460" target="_blank">
+                                        <img alt="ジャグリングアーティスト・斎藤エイスケ" height="180" src="https://gigaplus.makeshop.jp/ninjaisyo1/img/home_eisuke_img.jpg">
+                                    </a>
+                                </div>
+                                <div id="eisukeBlockNote">
+                                    <p>
+                                        <strong>ジャグリングアーティスト<br>
+                                        斎藤エイスケ</strong>
+                                    </p>
+                                    <p>
+                                        <a href="http://www.eisukesaito.com/" target="_blank">ジャグリングアーティスト・斎藤エイスケさん</a>に衣装協力しました。<br>
+                                        ［※ジャグラーバージョン忍者衣装］
+                                    </p>
+                                    <p class="more-link">
+                                        <a href="/view/page/keisuke">フォトギャラリー</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Facebook Feed -->
+                <div class="facebook-feed">
+                    <div class="fb-page" 
+                         data-href="https://www.facebook.com/ninjaisyocom/"
+                         data-tabs="timeline"
+                         data-width="500"
+                         data-height="600"
+                         data-small-header="false"
+                         data-adapt-container-width="true"
+                         data-hide-cover="false"
+                         data-show-facepile="true">
+                        <blockquote cite="https://www.facebook.com/ninjaisyocom/" class="fb-xfbml-parse-ignore">
+                            <a href="https://www.facebook.com/ninjaisyocom/">忍者衣装.com</a>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <{$module.footer}>
+
+    <!-- Facebook SDK -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v18.0" nonce="random_nonce"></script>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="<{$page.javascript}>"></script>
 <{$makeshop.body_bottom}>

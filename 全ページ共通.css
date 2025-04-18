@@ -111,7 +111,7 @@ pre {
 ----------------------------------------------------------------- */
 header {
   width: 100%;
-  padding: 30px 0;
+  padding: 20px 0;
   background: #fff;
   margin: 0 auto;
   text-align: center;
@@ -128,10 +128,16 @@ header .top-nav {
 header .header-menu {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 header .header-logo img {
   max-height: 80px;
   max-width: 700px;
+}
+
+.header-image img {
+  max-height: 60px;
+  width: auto;
 }
 
 .header.fix {
@@ -1999,6 +2005,11 @@ h2 span {
     max-width: 100%;
     max-height: 70px;
   }
+  
+  .header-image img {
+    max-height: 50px;
+    display: none; /* モバイル表示では非表示に */
+  }
 
   .header {
     padding: 80px 0 0;
@@ -2011,7 +2022,7 @@ h2 span {
   .gnav .account {
     display: none;
   }
-
+  
   .main-visual {
     margin: 0 auto 40px;
     padding-top: 20px;
