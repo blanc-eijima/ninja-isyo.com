@@ -21,86 +21,31 @@
             <tbody>
             <tr>
                 <td>
-                    <a href="index.php?dispatch=products.view&amp;product_id=68"><img alt="おこそ頭巾" height="100" src="https://gigaplus.makeshop.jp/ninjaisyo1/img/side/side_isho_okoso.png" width="100"></a>
+                    <a href="http://ninjaisyo1.shop14.makeshop.jp/view/item/000000000001?category_page_id=ninja-costume"><img alt="おこそ頭巾" height="100" src="https://gigaplus.makeshop.jp/ninjaisyo1/img/side/side_isho_okoso.png" width="100"></a>
                 </td>
                 <td>
-                    <a href="index.php?dispatch=products.view&amp;product_id=5"><img alt="イカ頭巾" height="100" src="https://gigaplus.makeshop.jp/ninjaisyo1/img/side/side_isho_ika.png" width="100"></a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="index.php?dispatch=products.view&amp;product_id=4"><img alt="平頭巾" height="100" src="https://gigaplus.makeshop.jp/ninjaisyo1/img/side/side_isho_hira.png" width="100"></a>
-                </td>
-                <td>
-                    <a href="index.php?dispatch=categories.view&amp;category_id=4"><img alt="伊賀袴式" height="100" src="https://gigaplus.makeshop.jp/ninjaisyo1/img/side/side_isho_igahakama.png" width="100"></a>
+                    <a href="http://ninjaisyo1.shop14.makeshop.jp/view/category/ct17"><img alt="イカ頭巾" height="100" src="https://gigaplus.makeshop.jp/ninjaisyo1/img/side/side_isho_ika.png" width="100"></a>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <a href="index.php?dispatch=categories.view&amp;category_id=13"><img alt="平頭巾" height="100" src="https://gigaplus.makeshop.jp/ninjaisyo1/img/side/side_isho_kunoichi.png" width="100"></a>
+                    <a href="http://ninjaisyo1.shop14.makeshop.jp/view/item/000000000002?category_page_id=ninja-costume"><img alt="平頭巾" height="100" src="https://gigaplus.makeshop.jp/ninjaisyo1/img/side/side_isho_hira.png" width="100"></a>
                 </td>
                 <td>
-                    <a href="index.php?dispatch=products.view&amp;product_id=71"><img alt="子供用" height="100" src="https://gigaplus.makeshop.jp/ninjaisyo1/img/side/side_isho_child.png" width="100"></a>
+                    <a href="http://ninjaisyo1.shop14.makeshop.jp/view/category/ct19"><img alt="伊賀袴式" height="100" src="https://gigaplus.makeshop.jp/ninjaisyo1/img/side/side_isho_igahakama.png" width="100"></a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="http://ninjaisyo1.shop14.makeshop.jp/view/category/ct20"><img alt="くノ一" height="100" src="https://gigaplus.makeshop.jp/ninjaisyo1/img/side/side_isho_kunoichi.png" width="100"></a>
+                </td>
+                <td>
+                    <a href="http://ninjaisyo1.shop14.makeshop.jp/view/category/ct21"><img alt="子供用" height="100" src="https://gigaplus.makeshop.jp/ninjaisyo1/img/side/side_isho_child.png" width="100"></a>
                 </td>
             </tr>
             </tbody>
             </table>
         </div>
-<!--
-        <section class="search">
-            <ul class="search-area">
-                <li>
-                    <label>キーワードで探す</label>
-                    <input type="text" data-id="<{$search_form.keyword_id}>" value="<{$search.keyword}>" class="side-search-keyword search-keyword" placeholder="キーワードを入力">
-                </li>
-                <li>
-                    <label>カテゴリー</label>
-                    <select data-id="<{$search_form.category_id}>" class="search-category">
-                        <{section name=i loop=$search_form.category_list}>
-                            <option value="<{$search_form.category_list[i].code}>" <{if $search.category.code == $search_form.category_list[i].code}>selected<{/if}>><{$search_form.category_list[i].name}></option>
-                        <{/section}>
-                    </select>
-                </li>
-                <li>
-                    <label>価格帯で絞り込む</label>
-                    <input type="text" data-id="<{$search_form.price_low_id}>" value="<{$search.price_low}>" class="search-price">～<input type="text" data-id="<{$search_form.price_high_id}>" value="<{$search.price_high}>" class="search-price">円
-                </li>
-                <li>
-                    <label>独自商品コードで探す</label>
-                    <input type="text" data-id="<{$search_form.original_code_id}>" class="side-search-original-code original-code" value="<{$search.original_code}>" placeholder="独自商品コードを入力">
-                </li>
-            </ul>
-            <a href="<{$search_form.search_url}>" class="search-btn search-url">検索する</a>
-        </section>
-    -->
-        <section class="side-section">
-            <p class="category-list-title">カテゴリーで探す</p>
-            <ul class="side-category-list">
-                <{section name=i loop=$category_menu.list}>
-                <{if $category_menu.list[i].child_category.has_item}>
-                    <li class="side-category-item"><p class="accordion"><{$category_menu.list[i].name}></p>
-                        <ul class="side-category-child-item close">
-                        <!--カテゴリー一覧へのリンクを出しておきたい場合は下記<li>タグをアクティブ
-                        <li><a href="<{$category_menu.list[i].url}>" class="child-item">すべての<{$category_menu.list[i].name}></a></li>
-                        -->
-                        <{section name=j loop=$category_menu.list[i].child_category.list}>
-                            <li><a href="<{$category_menu.list[i].child_category.list[j].url}>" class="child-item"><{$category_menu.list[i].child_category.list[j].name}></a></li>
-                        <{/section}>
-                        </ul>
-                    </li>
-                <{else}>
-                    <li class="side-category-item"><a href="<{$category_menu.list[i].url}>"><{$category_menu.list[i].name}></a></li>
-                <{/if}>
-                <{/section}>
-                <{if $bulk_menu.has_item}>
-                    <{section name=i loop=$bulk_menu.list}>
-                        <div class="side-category-item">
-                            <a href="<{$bulk_menu.list[i].url}>"><{$bulk_menu.list[i].name}></a>
-                        </div>
-                    <{/section}>
-                <{/if}>
-            </ul>
-        </section>
 
         <section class="side-section">
             <ul class="side-contact">
