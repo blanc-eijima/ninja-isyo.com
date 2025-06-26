@@ -84,6 +84,12 @@ pre {
   white-space: pre-wrap;
 }
 
+/* 画像のはみ出し防止 */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .clearfix {
   display: block;
 }
@@ -738,33 +744,104 @@ h2 span {
 /* -----------------------------------------------------------------
    footer
 ----------------------------------------------------------------- */
+/* フッター */
 .footer-bg {
-  background: #E6E6E6;
+  background-color: #f0f0f0;
+  padding: 20px 0;
 }
 
 .footer {
-  width: 1000px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 35px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding: 0 20px;
 }
-.footer img {
-  max-width: 120px;
+
+.footer-nav-container {
+  margin-bottom: 30px;
 }
 
 .footer-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
-  align-items: center;
+  justify-content: flex-start;
 }
+
 .footer-nav li {
   margin-right: 30px;
 }
 
+.footer-nav li:last-child {
+  margin-right: 0;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 13px;
+}
+
+.footer-content {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer-logo-area {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.logo-image {
+  width: 280px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-image img {
+  height: 160px;
+  width: auto;
+  max-width: 280px;
+}
+
+.store-image {
+  width: 280px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -20px;
+}
+
+.store-image img {
+  max-width: 100%;
+  max-height: 160px;
+  object-fit: contain;
+}
+
+.shop-info-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 15px;
+}
+
+.shop-info {
+  text-align: right;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
 .copyright {
+  text-align: right;
+  padding-top: 15px;
+  margin-top: 10px;
+  border-top: 1px solid #ddd;
   font-size: 12px;
-  max-width: 300px;
+  color: #666666;
 }
 
 /* -----------------------------------------------------------------
@@ -889,6 +966,9 @@ h2 span {
 }
 .item-image img {
   width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .main-image {
@@ -906,6 +986,9 @@ h2 span {
 }
 .gallery li img {
   width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .slick-prev,
@@ -1119,6 +1202,9 @@ h2 span {
 }
 .add-image-list img {
   width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .group-review-section {
@@ -2090,6 +2176,7 @@ h2 span {
     height: 100vh;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
+    background-color: #fff;
   }
 
   /*ボタン*/
@@ -2131,7 +2218,6 @@ h2 span {
     left: 18px;
     transform: translateY(6px) rotate(-45deg);
     width: 40%;
-    background: #fff;
   }
 
   .openbtn.active span:nth-of-type(2) {
@@ -2143,7 +2229,6 @@ h2 span {
     left: 18px;
     transform: translateY(-6px) rotate(45deg);
     width: 40%;
-    background: #fff;
   }
 
   .search {
@@ -2170,18 +2255,14 @@ h2 span {
   }
   .sp-side-section .sp-gnav li {
     text-align: center;
-    border: 1px solid #fff;
+    border: 1px solid #000;
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 20px;
   }
-  .sp-side-section .sp-gnav li a {
-    color: #fff;
-  }
   .sp-side-section .sp-gnav .logout a:before {
     display: inline-block;
     margin-right: 6px;
-    color: #fff;
   }
   .sp-side-section .sp-gnav .membership a:before {
     display: inline-block;
@@ -2329,21 +2410,79 @@ h2 span {
     padding: 0 5px;
   }
 
+  /* スマホ版フッター */
   .footer {
-    width: 95%;
-    display: block;
+    padding: 0 15px;
   }
-  .footer img {
+
+  .footer-nav-container {
     margin-bottom: 20px;
   }
 
   .footer-nav {
-    display: block;
-    margin-top: 20px;
+    flex-direction: column;
+    align-items: flex-start;
   }
+
   .footer-nav li {
     margin-right: 0;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
+  }
+
+  .footer-nav li:last-child {
+    margin-bottom: 0;
+  }
+
+  .footer-content {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  .footer-logo-area {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .logo-image {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+  }
+
+  .logo-image img {
+    height: auto;
+    max-height: 100px;
+    width: auto;
+    max-width: 100%;
+  }
+
+  .store-image {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin-left: 0;
+  }
+
+  .store-image img {
+    height: auto;
+    max-height: 100px;
+    width: auto;
+    max-width: 100%;
+  }
+
+  .shop-info-container {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .shop-info {
+    text-align: center;
+    font-size: 13px;
+  }
+
+  .copyright {
+    text-align: center;
+    font-size: 11px;
   }
 
   .breadcrumb {
