@@ -23,7 +23,7 @@
     <{$module.header}>
 
     <div class="contents">
-        <section class="main-visual">
+        <section class="main-visual" style="margin-top: 20px;">
             <{$shop.mainvisual}>
         </section>
 
@@ -47,28 +47,28 @@
                 <section class="banner-container">
                     <div class="banners-grid">
                         <div class="banner-item large">
-                            <a href="http://ninjaisyo1.shop14.makeshop.jp/view/item/000000000001?category_page_id=ninja-costume">
+                            <a href="/view/item/000000000001?category_page_id=ninja-costume">
                                 <img src="https://gigaplus.makeshop.jp/ninjaisyo1/img/bnr_top_okoso-l.jpg" alt="おこそ頭巾">
                             </a>
                         </div>
                         <div class="small-banners-wrapper">
                             <div class="banner-item small">
-                                <a href="http://ninjaisyo1.shop14.makeshop.jp/view/item/000000000002?category_page_id=ninja-costume">
+                                <a href="/view/item/000000000002?category_page_id=ninja-costume">
                                     <img src="https://gigaplus.makeshop.jp/ninjaisyo1/img/bnr_top_hira.jpg" alt="平頭巾">
                                 </a>
                             </div>
                             <div class="banner-item small">
-                                <a href="http://ninjaisyo1.shop14.makeshop.jp/view/category/ct19">
+                                <a href="/view/category/ct19">
                                     <img src="https://gigaplus.makeshop.jp/ninjaisyo1/img/bnr_top_igahakama_s.jpg" alt="伊賀袴式">
                                 </a>
                             </div>
                             <div class="banner-item small">
-                                <a href="http://ninjaisyo1.shop14.makeshop.jp/view/category/ct17">
+                                <a href="/view/category/ct17">
                                     <img src="https://gigaplus.makeshop.jp/ninjaisyo1/img/bnr_top_ika.jpg" alt="イカ頭巾">
                                 </a>
                             </div>
                             <div class="banner-item small">
-                                <a href="http://ninjaisyo1.shop14.makeshop.jp/view/category/ct20">
+                                <a href="/view/category/ct20">
                                     <img src="https://gigaplus.makeshop.jp/ninjaisyo1/img/bnr_top_kunoichi_ch1v-vt.jpg" alt="くノ一">
                                 </a>
                             </div>
@@ -76,23 +76,83 @@
                     </div>
                 </section>        
                 <!--新商品-->
+                <!--
                 <section class="main-section border">
                     <{$module.new}>
                 </section>
-
+                
                 <!--おすすめ商品-->
                 <section class="main-section border">
                     <{$module.recommend}>
+                    
+                    <!--色目についての注意書き-->
+                    <div class="color-notice" style="text-align: left; padding: 15px 20px; color: #666666; font-size: 12px; line-height: 1.5;">
+                        【色目についてのご注意】<br>撮影・ご覧の環境によって商品の写真の色及びカラー見本の色が、実際と異なる場合がありますので予めご了承下さい。
+                    </div>
                 </section>
 
                 <!--スペシャル商品-->
+                <!--
                 <section class="main-section border">
                     <{$module.special}>
                 </section>
-
+                -->
                 <!--ランキング-->
+                <!--
                 <section class="main-section border">
                     <{$module.ranking}>
+                </section>
+
+                <!--コラボレーション-->
+                <section class="main-section border">
+                    <div class="main-content">
+                        <div class="collaboration-grid">
+                            <div class="collaboration-item">
+                                <div id="shortFilm">
+                                    <div class="phtBox">
+                                        <a href="/view/page/kage">
+                                            <img alt="Short Film 影 KAGE" height="180" src="https://gigaplus.makeshop.jp/ninjaisyo1/img/shortfilm_img.jpg">
+                                        </a>
+                                    </div>
+                                    <div id="shortFilmNote">
+                                        <p>
+                                            <strong style="font-size: 1.2em; display: block; text-align: left;">Short Film<br>
+                                            影 KAGE</strong>
+                                        </p>
+                                        <p style="text-align: left; margin-top: 10px;">
+                                            Short Film 影KAGE に衣装協力しました。
+                                        </p>
+                                        <p class="more-link" style="text-align: left;">
+                                            <a href="/view/page/kage-photo" style="color: #FF8C00;">フォトギャラリー>></a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="collaboration-item">
+                                <div id="eisukeBlock">
+                                    <div class="phtBox">
+                                        <a href="https://vimeo.com/185166460" target="_blank">
+                                            <img alt="ジャグリングアーティスト・斎藤エイスケ" height="180" src="https://gigaplus.makeshop.jp/ninjaisyo1/img/home_eisuke_img.jpg">
+                                        </a>
+                                    </div>
+                                    <div id="eisukeBlockNote">
+                                        <p>
+                                            <strong style="font-size: 1.2em; display: block; text-align: left;">ジャグリングアーティスト<br>
+                                            斎藤エイスケ</strong>
+                                        </p>
+                                        <p style="text-align: left; margin-top: 10px;">
+                                            <a href="http://www.eisukesaito.com/"  style="color: #FF8C00;" target="_blank">ジャグリングアーティスト・斎藤エイスケさん</a>に<br>
+                                            衣装協力しました。<br>
+                                            ［※ジャグラーバージョン忍者衣装］
+                                        </p>
+                                        <p class="more-link" style="text-align: left; margin-top: 10px;">
+                                            <a href="/view/page/keisuke" style="color: #FF8C00;">フォトギャラリー>></a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
 
                 <!--お知らせ-->
@@ -153,74 +213,13 @@
         <!--最近チェックしたアイテム-->
         <{$module.checked}>
 
-        <!-- コラボレーション＆SNS -->
+        <!-- Facebook Link -->
         <div class="container">
-            <div class="content-grid">
-                <!-- コラボレーション -->
-                <div class="main-content">
-                    <div class="collaboration-grid">
-                        <div class="collaboration-item">
-                            <div id="shortFilm">
-                                <div class="phtBox">
-                                    <a href="/view/page/kage">
-                                        <img alt="Short Film 影 KAGE" height="180" src="https://gigaplus.makeshop.jp/ninjaisyo1/img/shortfilm_img.jpg">
-                                    </a>
-                                </div>
-                                <div id="shortFilmNote">
-                                    <p>
-                                        <strong style="font-size: 1.2em; display: block; text-align: left;">Short Film<br>
-                                        影 KAGE</strong>
-                                    </p>
-                                    <p style="text-align: left; margin-top: 10px;">
-                                        Short Film 影KAGE に衣装協力しました。
-                                    </p>
-                                    <p class="more-link" style="text-align: left;">
-                                        <a href="/view/page/kage" style="color: #FF8C00;">ギャラリー</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="collaboration-item">
-                            <div id="eisukeBlock">
-                                <div class="phtBox">
-                                    <a href="https://vimeo.com/185166460" target="_blank">
-                                        <img alt="ジャグリングアーティスト・斎藤エイスケ" height="180" src="https://gigaplus.makeshop.jp/ninjaisyo1/img/home_eisuke_img.jpg">
-                                    </a>
-                                </div>
-                                <div id="eisukeBlockNote">
-                                    <p>
-                                        <strong style="font-size: 1.2em; display: block; text-align: left;">ジャグリングアーティスト<br>
-                                        斎藤エイスケ</strong>
-                                    </p>
-                                    <p style="text-align: left; margin-top: 10px;">
-                                        <a href="http://www.eisukesaito.com/" target="_blank">ジャグリングアーティスト・斎藤エイスケさん</a>に<br>
-                                        衣装協力しました。<br>
-                                        ［※ジャグラーバージョン忍者衣装］
-                                    </p>
-                                    <p class="more-link" style="text-align: left; margin-top: 10px;">
-                                        <a href="/view/page/keisuke" style="color: #FF8C00;">ジャグリングアーティスト斎藤エイスケさんフォトギャラリー</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Facebook Feed -->
-                <div class="facebook-feed">
-                    <div class="fb-page" 
-                         data-href="https://www.facebook.com/ninjaisyocom/"
-                         data-tabs="timeline"
-                         data-width="500"
-                         data-height="600"
-                         data-small-header="false"
-                         data-adapt-container-width="true"
-                         data-hide-cover="false"
-                         data-show-facepile="true">
-                        <blockquote cite="https://www.facebook.com/ninjaisyocom/" class="fb-xfbml-parse-ignore">
-                            <a href="https://www.facebook.com/ninjaisyocom/">忍者衣装.com</a>
-                        </blockquote>
-                    </div>
-                </div>
+            <div class="facebook-link" style="text-align: center; padding: 20px;">
+                <a href="https://www.facebook.com/ninjaisyocom/" target="_blank" style="text-decoration: none; color: #1877f2;">
+                    <i class="fab fa-facebook-square" style="font-size: 48px; margin-right: 10px;"></i>
+                    <span style="font-size: 18px; vertical-align: middle;">忍者衣装.com Facebook</span>
+                </a>
             </div>
         </div>
 

@@ -122,3 +122,17 @@
   padding:8px 10px;
   float: left;
 }
+
+.favorite-text {
+  display: block;
+  text-align: center;
+  font-size: 13px;
+  color: #e57373; /* お好みで色を調整 */
+  margin-top: 4px;
+}
+
+.favorite {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

@@ -76,9 +76,10 @@
                 <div class="delivery-info">
                   <h3>配送期間</h3>
                   <p>
-                  注文日から、3～5日前後のお届けとなります（地域によっては、5日以上かかる場合もございます）。<br>
-                  銀行振込＜先払い＞をご選択いただいた場合は、通常、ご入金確認後3&#12316;5日の間に配送いたします。<br>
-                  ※3日以内の到着をご希望の、お客様は誠にお手数ですが、電話にてご確認下さい。
+                    注文日から、3～5日前後（休業日除く）のお届けとなります。<br>
+                    （地域によっては、5日以上（休業日除く）かかる場合もございます）。<br>
+                    銀行振込＜先払い＞をご選択いただいた場合は、通常、ご入金確認後3〜5日前後（休業日除く）にて配送いたします。<br>
+                    ※3日以内の到着をご希望の、お客様は誠にお手数ですが、電話にてご確認下さい。
                   </p>
                   </div>
 
@@ -244,13 +245,19 @@
                         </div>
                         <div class="nameprint-text-wrap">
                             <p class="nameprint-text"><{$item.name_print.list[i].html}></p>
+                            <!--
                             <p class="nameprint-total">最大<{$item.name_print.list[i].total_max}>文字／<{$item.name_print.list[i].row_max}>行まで</p>
                             <p class="nameprint-character">利用可能文字：<{$item.name_print.list[i].character_type}></p>
+                        -->
                         </div>
                         <{/section}>
                     <{/if}>
+                    <!--
+                    <p>ご不明な点があればご連絡ください。</p>
+                    -->
                 </div>
                 <{/if}>
+                <br>
 
                 <div class="item-quantity">
                     数量<input type="text" data-id="<{$item.quantity_id}>" value="<{$item.order_quantity_min}>">
@@ -265,14 +272,16 @@
                             <div class="favorite-wrap">
                                 <div><a href="<{$item.restock_url}>" class="restock-btn btn">再入荷お知らせ</a></div>
                                 <div class="favorite">
-                                    <a href="<{$item.favorite_entry_url}>"></a>
+                                    <a href="<{$item.favorite_entry_url}>" ></a>
+                                    <span class="favorite-text">お気に入りに追加</span>
                                 </div>
                             </div>
                         <{else}>
                             <div class="favorite-wrap">
                                 <div class="disabled-btn btn">売り切れ</div>
                                 <div class="favorite">
-                                    <a href="<{$item.favorite_entry_url}>"></a>
+                                    <a href="<{$item.favorite_entry_url}>" ></a>
+                                    <span class="favorite-text">お気に入りに追加</span>
                                 </div>
                             </div>
                         <{/if}>
@@ -323,7 +332,8 @@
                                             <div class="favorite-wrap">
                                                 <div class="disabled-btn btn sku-btn">売り切れ</div>
                                                 <div class="favorite">
-                                                    <a href="<{$item.option_sku.list[i].favorite_entry_url}>"></a>
+                                                    <a href="<{$item.option_sku.list[i].favorite_entry_url}>" ></a>
+                                                    <span class="favorite-text">お気に入りに追加</span>
                                                 </div>
                                             </div>
                                         <{else}>
@@ -339,7 +349,8 @@
                                             <div class="modal-open">
                                                 <a href="<{$item.option_sku.list[i].cart_entry_subscription_url}>" class="subscription-only subscription-btn btn sku-btn">定期購入する</a>
                                                 <div class="favorite">
-                                                    <a href="<{$item.option_sku.list[i].favorite_entry_url}>"></a>
+                                                    <a href="<{$item.option_sku.list[i].favorite_entry_url}>" ></a>
+                                                    <span class="favorite-text">お気に入りに追加</span>
                                                 </div>
                                             </div>
                                         <{/if}>
@@ -348,7 +359,8 @@
                                             <div class="favorite-wrap">
                                                 <div class="disabled-btn btn sku-btn">売り切れ</div>
                                                 <div class="favorite">
-                                                    <a href="<{$item.option_sku.list[i].favorite_entry_url}>"></a>
+                                                    <a href="<{$item.option_sku.list[i].favorite_entry_url}>" ></a>
+                                                    <span class="favorite-text">お気に入りに追加</span>
                                                 </div>
                                             </div>
                                         <{else}>
@@ -364,13 +376,15 @@
                                             <div class="modal-open">
                                                 <a href="<{$item.option_sku.list[i].cart_entry_url}>" class="add-cart-btn btn sku-btn">カートに入れる</a>
                                                 <div class="favorite">
-                                                    <a href="<{$item.option_sku.list[i].favorite_entry_url}>"></a>
+                                                    <a href="<{$item.option_sku.list[i].favorite_entry_url}>" ></a>
+                                                    <span class="favorite-text">お気に入りに追加</span>
                                                 </div>
                                             </div>
                                             <div class="modal-open">
                                                 <a href="<{$item.option_sku.list[i].cart_entry_subscription_url}>" class="subscription-btn btn sku-btn">定期購入する</a>
                                                 <div class="favorite">
-                                                    <a href="<{$item.option_sku.list[i].favorite_entry_url}>"></a>
+                                                    <a href="<{$item.option_sku.list[i].favorite_entry_url}>" ></a>
+                                                    <span class="favorite-text">お気に入りに追加</span>
                                                 </div>
                                             </div>
                                         <{/if}>
@@ -382,14 +396,16 @@
                                                 <div class="favorite-wrap">
                                                     <div><a href="<{$item.option_sku.list[i].restock_url}>" class="restock-btn btn sku-btn">再入荷お知らせ</a></div>
                                                     <div class="favorite">
-                                                        <a href="<{$item.option_sku.list[i].favorite_entry_url}>"></a>
+                                                        <a href="<{$item.option_sku.list[i].favorite_entry_url}>" ></a>
+                                                        <span class="favorite-text">お気に入りに追加</span>
                                                     </div>
                                                 </div>
                                             <{else}>
                                                 <div class="favorite-wrap">
                                                     <div class="disabled-btn btn sku-btn">売り切れ</div>
                                                     <div class="favorite">
-                                                        <a href="<{$item.option_sku.list[i].favorite_entry_url}>"></a>
+                                                        <a href="<{$item.option_sku.list[i].favorite_entry_url}>" ></a>
+                                                        <span class="favorite-text">お気に入りに追加</span>
                                                     </div>
                                                 </div>
                                             <{/if}>
@@ -407,7 +423,8 @@
                                             <div class="modal-open">
                                                 <a href="<{$item.option_sku.list[i].cart_entry_url}>" class="add-cart-btn btn cart-order-btn sku-btn" data-button-id="cart-order">カートに入れる</a>
                                                 <div class="favorite">
-                                                    <a href="<{$item.option_sku.list[i].favorite_entry_url}>"></a>
+                                                    <a href="<{$item.option_sku.list[i].favorite_entry_url}>" ></a>
+                                                    <span class="favorite-text">お気に入りに追加</span>
                                                 </div>
                                             </div>
                                         <{/if}>
@@ -425,7 +442,8 @@
                                         <div class="modal-open">
                                             <a href="<{$item.cart_entry_subscription_url}>" class="subscription-btn btn">定期購入する</a>
                                             <div class="favorite">
-                                                <a href="<{$item.favorite_entry_url}>"></a>
+                                                <a href="<{$item.favorite_entry_url}>" ></a>
+                                                <span class="favorite-text">お気に入りに追加</span>
                                             </div>
                                         </div>
                                     <{elseif $item.is_subscription}>
@@ -433,14 +451,16 @@
                                             <div class="disabled-btn btn outstock off">売り切れ</div>
                                             <a href="<{$item.cart_entry_url}>" class="add-cart-btn btn instock off">カートに入れる</a>
                                             <div class="favorite">
-                                                <a href="<{$item.favorite_entry_url}>"></a>
+                                                <a href="<{$item.favorite_entry_url}>" ></a>
+                                                <span class="favorite-text">お気に入りに追加</span>
                                             </div>
                                         </div>
                                         <div class="modal-open">
                                             <div class="disabled-btn btn outstock off">売り切れ</div>
                                             <a href="<{$item.cart_entry_subscription_url}>" class="subscription-btn btn instock off">定期購入する</a>
                                             <div class="favorite">
-                                                <a href="<{$item.favorite_entry_url}>"></a>
+                                                <a href="<{$item.favorite_entry_url}>" ></a>
+                                                <span class="favorite-text">お気に入りに追加</span>
                                             </div>
                                         </div>
                                     <{else}>
@@ -452,7 +472,8 @@
                                             <{/if}>
                                             <a href="<{$item.cart_entry_url}>" class="add-cart-btn btn cart-order-btn instock off" data-button-id="cart-order">カートに入れる</a>
                                             <div class="favorite">
-                                                <a href="<{$item.favorite_entry_url}>"></a>
+                                                <a href="<{$item.favorite_entry_url}>" ></a>
+                                                <span class="favorite-text">お気に入りに追加</span>
                                             </div>
                                         </div>
                                     <{/if}>
@@ -466,7 +487,8 @@
                                 <div class="modal-open">
                                     <a href="<{$item.cart_entry_subscription_url}>" class="subscription-only subscription-btn btn">定期購入する</a>
                                     <div class="favorite">
-                                        <a href="<{$item.favorite_entry_url}>"></a>
+                                        <a href="<{$item.favorite_entry_url}>" ></a>
+                                        <span class="favorite-text">お気に入りに追加</span>
                                     </div>
                                 </div>
                             <{elseif $item.is_subscription}>
@@ -474,13 +496,15 @@
                                     <div class="modal-open">
                                         <a href="<{$item.cart_entry_url}>" class="add-cart-btn btn" data-button-id="cart-order">カートに入れる</a>
                                         <div class="favorite">
-                                            <a href="<{$item.favorite_entry_url}>"></a>
+                                            <a href="<{$item.favorite_entry_url}>" ></a>
+                                            <span class="favorite-text">お気に入りに追加</span>
                                         </div>
                                     </div>
                                     <div class="modal-open">
                                         <a href="<{$item.cart_entry_subscription_url}>" class="subscription-btn btn">定期購入する</a>
                                         <div class="favorite">
-                                            <a href="<{$item.favorite_entry_url}>"></a>
+                                            <a href="<{$item.favorite_entry_url}>" ></a>
+                                            <span class="favorite-text">お気に入りに追加</span>
                                         </div>
                                     </div>
                                 </div>
@@ -488,7 +512,8 @@
                                 <div class="modal-open">
                                     <a href="<{$item.cart_entry_url}>" class="add-cart-btn btn cart-order-btn" data-button-id="cart-order">カートに入れる</a>
                                     <div class="favorite">
-                                        <a href="<{$item.favorite_entry_url}>"></a>
+                                        <a href="<{$item.favorite_entry_url}>" ></a>
+                                        <span class="favorite-text">お気に入りに追加</span>
                                     </div>
                                 </div>
                             <{/if}>
@@ -526,29 +551,40 @@
                         <!--販売期間外の場合-->
                         <p class="disabled-btn btn">現在購入いただけません</p>
                         <div class="favorite">
-                            <a href="<{$item.favorite_entry_url}>"></a>
+                            <a href="<{$item.favorite_entry_url}>" ></a>
+                            <span class="favorite-text">お気に入りに追加</span>
                         </div>
                     </div>
                 <{/if}>
                 </div>
-
+                <!--
                 <p class="item-contact"><a href="<{$item.contact_url}>">この商品について問い合わせる</a></p>
-
+                -->
 
                 <ul class="item-info-list border-top">
                     <{if $item.system_code}>
+                    <!--
                     <li>
                         <dl>
                             <dt>システム商品コード</dt>
                             <dd>：<{$item.system_code}></dd>
                         </dl>
                     </li>
+                    -->
                     <{/if}>
                     <{if $item.original_code}>
                     <li>
                         <dl>
-                            <dt>独自商品コード</dt>
+                            <dt>商品コード</dt>
                             <dd>：<{$item.original_code}></dd>
+                        </dl>
+                    </li>
+                    <!--色目についての注意書き-->
+                    <li class="border-top">
+                        <dl style="display: block;">
+                            <dd style="width: 100%; color: #666666; font-size: 12px; line-height: 1.5;">
+                                【色目についてのご注意】<br>撮影・ご覧の環境によって商品の写真の色及びカラー見本の色が、実際と異なる場合がありますので予めご了承下さい。
+                            </dd>
                         </dl>
                     </li>
                     <{/if}>

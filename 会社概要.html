@@ -1,58 +1,139 @@
-<table style="width: 600px; border-collapse: collapse; margin: 20px 0; font-size: 16px;">
-    <tr>
-        <th style="border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f4f4f4; font-weight: bold; white-space: nowrap;">項目</th>
-        <th style="border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f4f4f4; font-weight: bold;">内容</th>
-    </tr>
-    <tr>
-        <td style="border: 1px solid #ddd; padding: 8px; white-space: nowrap;">会社名</td>
-        <td style="border: 1px solid #ddd; padding: 8px;">株式会社　片岡呉服店</td>
-    </tr>
-    <tr>
-        <td style="border: 1px solid #ddd; padding: 8px; white-space: nowrap;">店名</td>
-        <td style="border: 1px solid #ddd; padding: 8px;">きもの座かたおか</td>
-    </tr>
-    <tr>
-        <td style="border: 1px solid #ddd; padding: 8px; white-space: nowrap;">創業</td>
-        <td style="border: 1px solid #ddd; padding: 8px;">明治20年</td>
-    </tr>
-    <tr>
-        <td style="border: 1px solid #ddd; padding: 8px; white-space: nowrap;">会社設立</td>
-        <td style="border: 1px solid #ddd; padding: 8px;">昭和27年1月7日</td>
-    </tr>
-    <tr>
-        <td style="border: 1px solid #ddd; padding: 8px; white-space: nowrap;">代表者</td>
-        <td style="border: 1px solid #ddd; padding: 8px;">片岡　健太郎</td>
-    </tr>
-    <tr>
-        <td style="border: 1px solid #ddd; padding: 8px; white-space: nowrap;">所在地</td>
-        <td style="border: 1px solid #ddd; padding: 8px;">〒518-0832　三重県伊賀市上野車坂町823</td>
-    </tr>
-    <tr>
-        <td style="border: 1px solid #ddd; padding: 8px; white-space: nowrap;">TEL</td>
-        <td style="border: 1px solid #ddd; padding: 8px;">0595-21-0256</td>
-    </tr>
-    <tr>
-        <td style="border: 1px solid #ddd; padding: 8px; white-space: nowrap;">FAX</td>
-        <td style="border: 1px solid #ddd; padding: 8px;">0595-23-7048</td>
-    </tr>
-    <tr>
-        <td style="border: 1px solid #ddd; padding: 8px; white-space: nowrap;">Eメール</td>
-        <td style="border: 1px solid #ddd; padding: 8px;"><a href="mailto:info@ninja-isyo.com">info@ninja-isyo.com</a></td>
-    </tr>
-    <tr>
-        <td style="border: 1px solid #ddd; padding: 8px; white-space: nowrap;">営業時間</td>
-        <td style="border: 1px solid #ddd; padding: 8px; word-wrap: break-word;">10：00～18：00
-第3日曜日は14：00～18：00
-オンラインショッピングに関するご質問・また商品発送対応も上記に準じます。
-        </td>
-    </tr>
-    <tr>
-        <td style="border: 1px solid #ddd; padding: 8px; white-space: nowrap;">定休日</td>
-        <td style="border: 1px solid #ddd; padding: 8px; word-wrap: break-word;">毎週水曜日・木曜日
-その他GW・夏期休暇・年末年始休暇オンラインショッピングに関するご質問・また商品発送対応も上記に準じます。</td>
-    </tr>
-    <tr>
-        <td style="border: 1px solid #ddd; padding: 8px; white-space: nowrap;">事業内容</td>
-        <td style="border: 1px solid #ddd; padding: 8px;">呉服小売業</td>
-    </tr>
-</table>
+<!doctype html>
+<html lang="ja" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title><{$page.title}></title>
+<meta name="description" content="<{$page.description}>">
+<link rel="canonical" href="<{$page.canonical_url}>">
+<meta property="og:type" content="website">
+<meta property="og:title" content="<{$page.title}>">
+<meta property="og:description" content="<{$page.description}>">
+<meta property="og:site_name" content="<{$shop.name}>">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="shortcut icon" type="image/ico" href="<{$shop.favicon_url}>">
+<link href="<{$page.css}>" rel="stylesheet">
+<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+<{$makeshop.head}>
+<style>
+.company-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+.company-table th {
+  width: 25%;
+  background-color: #f5f5f5;
+  padding: 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+  font-weight: bold;
+  vertical-align: top;
+}
+.company-table td {
+  width: 75%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  vertical-align: top;
+}
+@media screen and (max-width: 768px) {
+  .company-table th,
+  .company-table td {
+    display: block;
+    width: 100%;
+  }
+  .company-table th {
+    border-bottom: none;
+  }
+}
+</style>
+</head>
+
+<body>
+<{$makeshop.body_top}>
+    <{$module.header}>
+
+    <div class="contents">
+
+        <div class="breadcrumb">
+            <span class="breadcrumb-item"><a href="<{$url.top}>">ホーム</a></span>
+            <span class="breadcrumb-item">会社概要</span>
+        </div>
+
+        <div class="container">
+
+            <{$module.side}>
+
+            <main class="main">
+                <section class="main-section">
+                    <div class="category-title">
+                        <h2 class="guide-title">会社概要</h2>
+                    </div>
+                    
+                    <table class="company-table">
+                        <tr>
+                            <th>会社名</th>
+                            <td>株式会社　片岡呉服店</td>
+                        </tr>
+                        <tr>
+                            <th>店名</th>
+                            <td>きもの座かたおか</td>
+                        </tr>
+                        <tr>
+                            <th>創業</th>
+                            <td>明治20年</td>
+                        </tr>
+                        <tr>
+                            <th>会社設立</th>
+                            <td>昭和27年1月7日</td>
+                        </tr>
+                        <tr>
+                            <th>代表者</th>
+                            <td>片岡　健太郎</td>
+                        </tr>
+                        <tr>
+                            <th>所在地</th>
+                            <td>〒518-0832　三重県伊賀市上野車坂町823</td>
+                        </tr>
+                        <tr>
+                            <th>TEL</th>
+                            <td>0595-21-0256</td>
+                        </tr>
+                        <tr>
+                            <th>FAX</th>
+                            <td>0595-23-7048</td>
+                        </tr>
+                        <tr>
+                            <th>Eメール</th>
+                            <td><a href="mailto:info@ninja-isyo.com">info@ninja-isyo.com</a></td>
+                        </tr>
+                        <tr>
+                            <th>営業時間</th>
+                            <td>10：00～18：00<br>
+第3日曜日は14：00～18：00<br>
+オンラインショッピングに関するご質問・また商品発送対応も上記に準じます。</td>
+                        </tr>
+                        <tr>
+                            <th>休業日</th>
+                            <td>毎週水曜日・木曜日<br>
+その他GW・夏期休暇・年末年始休暇<br>
+オンラインショッピングに関するご質問・また商品発送対応も上記に準じます。</td>
+                        </tr>
+                        <tr>
+                            <th>事業内容</th>
+                            <td>呉服小売業</td>
+                        </tr>
+                    </table>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <{$module.footer}>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="<{$page.javascript}>"></script>
+<{$makeshop.body_bottom}>
+</body>
+</html>
